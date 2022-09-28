@@ -31,6 +31,7 @@
       overflow-x:hidden;
       background:#000000;
       color: white;
+      max-width: 22000;
     }
 
     #container, #scrollDist, .road {
@@ -346,7 +347,7 @@
       gsap.registerPlugin(ScrollTrigger);
 
       // set initial states
-      gsap.set('#scrollDist', {width:'1000px', height:'800px'})
+      gsap.set('#scrollDist', {width:'1000px', height:'850px'})
       gsap.set('#container', {position:'fixed', width:'1000px', height:'1000px', transformOrigin:'0 0'})
       gsap.to('#container', {duration:1, opacity:1, ease:'power2.inOut', delay:0.3})
 
@@ -456,12 +457,15 @@
       scrollTrigger: {
         trigger: '.four',
         start: "-=600px",
-        end: "+=600px",
+        end: "+=400px",
         pin: true,
         pinSpacing: false,
         scrub: 2,
         // markers: true
       }
+    })
+    .to('.four', {
+      yPercent: -200,
     })
     .to('.four', {
       yPercent: -100,
@@ -478,8 +482,8 @@
       gsap.timeline({
       scrollTrigger: {
         trigger: '.five',
-        start: "-=500px",
-        end: "+=400px",
+        start: "-=400px",
+        end: "+=200px",
         pin: true,
         pinSpacing: false,
         scrub: 2,
@@ -487,15 +491,15 @@
       }
     })
     .to('.five', {
-      yPercent: -40,
+      yPercent: 0,
       opacity: 1,
       ease: "power1.in"
     })
     .to('.five', {
-      yPercent: -310,
-      opacity: 0,
-      ease: "power1.out"
-    });
+      yPercent: -200,
+      opacity: 1,
+      ease: "power1.in"
+    })
     </script>
 </body>
 </html>
