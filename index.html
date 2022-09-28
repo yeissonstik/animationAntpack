@@ -160,7 +160,7 @@
 <body>
   <div id="scrollDist"></div>
   <div id="container">
-    <svg class="road" xmlns="http://www.w3.org/2000/svg" width="2229" height="1086" viewBox="0 0 2229 1086" fill="none">
+    <svg class="road" xmlns="http://www.w3.org/2000/svg" width="2229" height="1586" viewBox="0 0 2229 1086" fill="none">
       <path id="p" d="M1 608V926.5C1 1014.04 71.9629 1085 159.5 1085V1085C247.037 1085 318 1014.04 318 926.5V568.75C318 447.938 415.938 350 536.75 350V350C657.562 350 755.5 447.938 755.5 568.75V640.75C755.5 742.232 837.768 824.5 939.25 824.5V824.5C1040.73 824.5 1123 742.232 1123 640.75V220C1123 99.0496 1221.05 1 1342 1V1C1462.95 1 1561 99.0496 1561 220V751.75C1561 833.074 1626.93 899 1708.25 899V899C1789.57 899 1855.5 833.074 1855.5 751.75V421C1855.5 317.999 1939 234.5 2042 234.5V234.5C2145 234.5 2228.5 317.999 2228.5 421V483" stroke="white"/>
       <circle id="c" r="20" fill="#EF0C75" />
       </svg>
@@ -346,7 +346,7 @@
       gsap.registerPlugin(ScrollTrigger);
 
       // set initial states
-      gsap.set('#scrollDist', {width:'1000px', height:'1570px'})
+      gsap.set('#scrollDist', {width:'1000px', height:'800px'})
       gsap.set('#container', {position:'fixed', width:'1000px', height:'1000px', transformOrigin:'0 0'})
       gsap.to('#container', {duration:1, opacity:1, ease:'power2.inOut', delay:0.3})
 
@@ -359,8 +359,8 @@
         ease: "none",
         scrollTrigger:{
         trigger:'#scrollDist', 
-        start:'top top', 
-        end:'bottom', 
+        start:'top', 
+        end:'+=1550px', 
         scrub: true,
         pin: true,
         // markers: true,
@@ -487,7 +487,7 @@
       }
     })
     .to('.five', {
-      yPercent: -20,
+      yPercent: -40,
       opacity: 1,
       ease: "power1.in"
     })
