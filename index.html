@@ -50,9 +50,10 @@
 
     .one {
       position: absolute;
+      background-color: #000000;
       opacity: 1 !important;
-      top: 100px;
-      left: 120px;
+      top: 0;
+      left: 80px;
       text-transform: uppercase;
     }
 
@@ -373,7 +374,7 @@
           }, immediateRender:true, ease:'none'}, 0)
 
       //move container's x/y to follow the red circle
-      gsap.ticker.add( ()=> gsap.to('#container', {duration:2, x:-gsap.getProperty('#c', 'x')/1.5, y:-500}) );
+      gsap.ticker.add( ()=> gsap.to('#container', { duration:1, x:-gsap.getProperty('#c', 'x')/1.5, y:-700}) );
 
       //center the container's left/top position
       window.onload = window.onresize = ()=> { gsap.set('#container', {left:0, top:innerHeight/2}); }
@@ -419,7 +420,7 @@
       }
     })
     .to('.two', {
-      yPercent: -30,
+      yPercent: -80,
       opacity: 1,
       ease: "power1.in",
     })
@@ -442,7 +443,7 @@
       }
     })
     .to('.three', {
-      yPercent: -120,
+      yPercent: -190,
       opacity: 1,
       ease: "power1.in"
     })
@@ -468,7 +469,7 @@
       yPercent: -200,
     })
     .to('.four', {
-      yPercent: -100,
+      yPercent: -120,
       opacity: 1,
       ease: "power1.in"
     })
@@ -491,7 +492,7 @@
       }
     })
     .to('.five', {
-      yPercent: 0,
+      yPercent: -70,
       opacity: 1,
       ease: "power1.in"
     })
