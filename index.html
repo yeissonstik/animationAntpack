@@ -99,6 +99,7 @@
       margin-left: 580px;
     }
     .five > button {
+      cursor: pointer;
       border-radius: 100px;
       outline: none;
       border-style: none;
@@ -202,7 +203,7 @@
       </section>
 
       <section class="panel step five">
-        <button>CONTACT US</button>
+        <button onclick="sendMessage()">CONTACT US</button>
       </section>
     
     </div>
@@ -214,6 +215,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/MotionPathPlugin.min.js"></script>
 
     <script>
+
+      function sendMessage(){
+          let msg={toContact : "true"};
+          // In production, DO NOT use '*', use toe target domain
+          childwin.postMessage(msg,'*')// childwin is the targetWindow
+          childwin.focus();
+      }
+
+
       gsap.registerPlugin(ScrollTrigger);
 
       // set initial states
