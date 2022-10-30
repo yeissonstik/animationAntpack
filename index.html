@@ -219,7 +219,7 @@
       function sendMessage(){
           let msg={toContact : "true"};
           // In production, DO NOT use '*', use toe target domain
-          window.postMessage(msg,'*')// childwin is the targetWindow
+          window.parent.postMessage(msg,'*')// childwin is the targetWindow
           window.focus();
       }
 
